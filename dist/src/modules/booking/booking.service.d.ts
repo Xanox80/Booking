@@ -7,8 +7,8 @@ export declare class BookingService {
     private validateBookingTimes;
     createBooking(dto: BookingDto): Promise<any>;
     getAllBookings(): Promise<{
-        id: string;
         user: string;
+        id: string;
         data: Date;
         startTime: string;
         endTime: string;

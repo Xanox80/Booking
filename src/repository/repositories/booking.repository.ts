@@ -1,6 +1,6 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
-import { Booking, Prisma } from '@prisma/client';
-import { PrismaService } from 'prisma/prisma.service';
+import { Booking } from '@prisma/client';
+import { PrismaService } from '../../../prisma/prisma.service';
 import { BookingDto } from 'src/modules/booking';
 
 @Injectable()

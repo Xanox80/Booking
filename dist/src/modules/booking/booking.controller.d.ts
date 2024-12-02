@@ -7,8 +7,8 @@ export declare class BookingController {
     constructor(bookingService: BookingService);
     createBooking(bookingDto: BookingDto): Promise<any>;
     getAllBookings(): Promise<{
-        id: string;
         user: string;
+        id: string;
         data: Date;
         startTime: string;
         endTime: string;
