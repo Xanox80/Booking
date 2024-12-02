@@ -1,0 +1,27 @@
+
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Booking {
+id            String  @id @default(uuid())
+  user        String   @db.VarChar(255)
+  data   DateTime @default(now())           @db.Timestamptz(3)
+  startTime   String   @db.VarChar(255)
+  endTime     String   @db.VarChar(255)
+}
+
+model User {
+  id            String  @id @default(uuid())
+  name          String  @db.VarChar(255)
+  password      String  @db.VarChar(255)
+  access_token  String?
+	refresh_token String?
+   role         String  @db.VarChar(255)
+}
